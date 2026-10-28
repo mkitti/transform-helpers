@@ -14,7 +14,7 @@
 		<enforcer.skip>true</enforcer.skip>
 
 		<!-- TEMPORARY: remove these overrides once janelia-jhdf5 is released and pom-scijava manages it. -->
-		<janelia-jhdf5.version>22.03.01-SNAPSHOT</janelia-jhdf5.version>
+		<janelia-jhdf5.version>26.10.0-SNAPSHOT</janelia-jhdf5.version>
 		<javacpp.version>1.5.15-SNAPSHOT</javacpp.version>
 		<hdf5.version>2.2.0-${javacpp.version}</hdf5.version>
 	</properties>
@@ -31,7 +31,7 @@
 			<groupId>org.janelia.saalfeldlab</groupId>
 			<artifactId>n5-hdf5</artifactId>
 			<exclusions>
-				<!-- Replaced by org.scijava:janelia-jhdf5 (same packages). Remove once n5-hdf5 depends on janelia-jhdf5. -->
+				<!-- Replaced by org.janelia:janelia-jhdf5 (same packages). Remove once n5-hdf5 depends on janelia-jhdf5. -->
 				<exclusion>
 					<groupId>cisd</groupId>
 					<artifactId>jhdf5</artifactId>
@@ -47,7 +47,7 @@
 			<artifactId>n5</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.scijava</groupId>
+			<groupId>org.janelia</groupId>
 			<artifactId>janelia-jhdf5</artifactId>
 			<version>${janelia-jhdf5.version}</version>
 		</dependency>
